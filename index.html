@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="container single">
+      <section class="left">
+        <div class="brand">
+          <h1>Registration</h1>
+          <p class="muted">Fill in your details below.</p>
+        </div>
+
+        <form id="regForm" action="submit.php" method="POST" novalidate>
+          <div class="grid">
+
+            <div class="field">
+              <label for="first_name">First name <span class="req">*</span></label>
+              <input id="first_name" name="first_name" type="text" required />
+              <small class="hint" data-for="first_name"></small>
+            </div>
+
+            <div class="field">
+              <label for="middle_name">Middle name</label>
+              <input id="middle_name" name="middle_name" type="text" />
+              <small class="hint" data-for="middle_name"></small>
+            </div>
+
+            <div class="field">
+              <label for="last_name">Last name</label>
+              <input id="last_name" name="last_name" type="text" />
+              <small class="hint" data-for="last_name"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" required />
+              <small class="hint" data-for="email"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone1">Phone No (Primary) <span class="req">*</span></label>
+              <input id="phone1" name="phone1" type="tel" required />
+              <small class="hint" data-for="phone1"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone2">Phone No (Secondary)</label>
+              <input id="phone2" name="phone2" type="tel" />
+              <small class="hint" data-for="phone2"></small>
+            </div>
+
+            <div class="field">
+              <label for="dob">Date of birth</label>
+              <input id="dob" name="dob" type="date" />
+            </div>
+
+            <div class="field">
+              <label>Gender</label>
+              <div class="radios">
+                <label><input type="radio" name="gender" value="Male" checked> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+              </div>
+            </div>
+
+            <div class="field full">
+              <label for="course">Course / Program <span class="req">*</span></label>
+              <select id="course" name="course" required>
+                <option value="">— Select course —</option>
+
+                <optgroup label="B.E. Courses">
+                  <option value="B.E. - Computer Science">B.E. - Computer Science</option>
+                  <option value="B.E. - Electronics">B.E. - Electronics</option>
+                  <option value="B.E. - Mechanical">B.E. - Mechanical</option>
+                  <option value="B.E. - Civil">B.E. - Civil</option>
+                  <option value="B.E. - Information Technology">B.E. - Information Technology</option>
+                </optgroup>
+
+                <optgroup label="Diploma Courses">
+                  <option value="Diploma - Civil">Diploma - Civil</option>
+                  <option value="Diploma - Mechanical">Diploma - Mechanical</option>
+                  <option value="Diploma - Electrical">Diploma - Electrical</option>
+                </optgroup>
+
+                <optgroup label="Science">
+                  <option value="B.Sc. - Physics">B.Sc. - Physics</option>
+                  <option value="B.Sc. - Chemistry">B.Sc. - Chemistry</option>
+                  <option value="B.Sc. - Biology">B.Sc. - Biology</option>
+                </optgroup>
+
+                <optgroup label="Arts & Commerce">
+                  <option value="B.A. - History">B.A. - History</option>
+                  <option value="B.A. - English">B.A. - English</option>
+                  <option value="B.Com.">B.Com.</option>
+                </optgroup>
+              </select>
+              <small class="hint" data-for="course"></small>
+            </div>
+
+            <div class="field full">
+              <label for="address">Address</label>
+              <textarea id="address" name="address" rows="3"></textarea>
+            </div>
+
+          </div>
+
+          <div class="actions">
+            <button id="submitBtn" type="submit" class="btn primary">Submit</button>
+            <button id="resetBtn" type="button" class="btn ghost">Reset</button>
+          </div>
+        </form>
+
+        <p class="foot muted">Your data is only used for display — not stored.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
